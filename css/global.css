@@ -11,7 +11,7 @@ li{list-style: none;}
 .ftwM{
     font-weight: 500;
 }
-@media screen and (min-width: 1280px) {
+/* @media screen and (min-width: 1280px) {
     header,
     header nav ul > li ol{
         background-color: rgba(175, 130, 96, 0.8);
@@ -70,16 +70,16 @@ li{list-style: none;}
     }
     header nav ul > li:hover ol{
         display: block;
-        /* animation: oper 0.2s ease-in forwards; */
+        animation: oper 0.2s ease-in forwards;
     }
-    /* @keyframes oper{
+    @keyframes oper{
         10%{
             opacity: 0;
         }
         100%{
             opacity: 1;
         }
-    } */
+    }
     header nav ul > li ol{
         position: absolute; margin-top: 10px; left: 50%; transform: translateX(-50%);
         border-radius: 1.25em; display: none;
@@ -102,4 +102,4 @@ li{list-style: none;}
     header > div a:not(:first-child)::before{
         content: '|'; position: absolute; left: 0; color: #eeeeee;
     }
-}
+} */
