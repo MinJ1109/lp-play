@@ -3,19 +3,45 @@
 body{background-color: #e4c59e;}
 a{text-decoration: none;}
 li{list-style: none;}
+.btn1{
+    background-color: #322c2b; border-radius: 2rem; transition: background-color 0.5s;
+    color: #eeeeee; font-weight: 500; font-size: clamp(16px, 1.04vw, 20px);
+    padding: 0 clamp(21px, 1.3vw, 25px); line-height: clamp(34px, 2vw, 38px); display: inline-block;
+}
+.btn1:hover{
+    background-color: #803d3b;
+}
 /* ! */
 .fts14{
-    font-size: 0.87rem;
+    font-size: clamp(10px, 0.83vw, 14px);
+}
+.fts15{
+    font-size: clamp(11px, 0.78vw, 15px);
 }
 .fts16{
-    font-size: 0.93rem;
+    font-size: clamp(12px, 0.83vw, 16px);
 }
 .fts18{
-    font-size: 1.12rem;
+    font-size: clamp(14px, 0.93vw, 18px);
+}
+.fts20{
+    font-size: clamp(16px, 1.04vw, 20px);
+}
+.fts22{
+    font-size: clamp(18px, 1.14vw, 22px);
+}
+.fts30{
+    font-size: clamp(26px, 1.56vw, 30px);
+}
+.fts90{
+    font-size: clamp(60px, 4.68vw, 90px);
 }
 /* ! */
 .ftwM{
     font-weight: 500;
+}
+.ftwEB{
+    font-weight: 800;
 }
 
 @keyframes rotate{
@@ -40,7 +66,7 @@ li{list-style: none;}
 
 @media screen and (min-width: 1280px){
     header{
-        padding: 2.31vh 2.08vw; position: sticky; top: 0;
+        padding: 2.31vh 2.08vw; position: sticky; top: 0; z-index: 10;
     }
     header > div{
         background-color: #af8260; padding: 0 2.08vw; box-sizing: border-box; border-radius: 3rem;
@@ -79,7 +105,8 @@ li{list-style: none;}
         color: #803d3b;
     }
     header > div nav ul > li > a{
-        line-height: 1.87rem; padding: 1.63rem 0 1.63rem 2.5rem; position: relative;
+        line-height: clamp(26px, 1.56vw, 30px); position: relative;
+        padding: clamp(21px, 1.03vw, 25px) 0 clamp(21px, 1.03vw, 25px) clamp(36px, 1.03vw, 40px); 
     }
     header > div nav ul > li > a::before{
         content:''; background: url('../images/ico_record.svg') left center no-repeat; top: 0; left: 0; 
@@ -91,21 +118,21 @@ li{list-style: none;}
     }
     header > div nav ul > li ol{
         display: none;
-        position: absolute; top: 5.82rem; background-color: #af8260; 
+        position: absolute; top: clamp(78px, 4.68vw, 90px); background-color: #af8260; 
         left: 50%; transform: translateX(-50%); border-radius: 20px;
     }
     header > div nav ul > li ol li{
         text-align: center;
     }
     header > div nav ul > li ol li a{
-        padding: 0 1.25rem; line-height: 3.12rem; 
+        padding: 0 1.25rem; line-height: clamp(46px, 2.6vw, 50px); 
     }
     
     header > div div{
         text-align: right; 
     }
     header > div div a{
-        color: #eeeeee; line-height: 3.12rem; 
+        color: #eeeeee; line-height: clamp(46px, 2.6vw, 50px); 
     }
     header > div div a:first-child,
     header > div div a:nth-of-type(2){
@@ -118,6 +145,9 @@ li{list-style: none;}
         content: '|'; position: absolute; left: 0; color: #eeeeee;
     }
 
+    .mainContainer{
+        z-index: 1;
+    }
     .mainContainer > a{
     display: block; background-color: #af8260; line-height: 2.5rem; width: 6.56rem; text-align: center;
     color: #eeeeee; border-radius: 2rem; position: fixed; left: 2.08vw; bottom: 3.7vh; z-index: 10;
@@ -145,10 +175,10 @@ li{list-style: none;}
     .mainContainer form .searchPoint input[type='search']{
         width: 0; line-height: 2.87rem; border: #803d3b solid 2px;
         color: #322c2b; border-radius: 1.56rem 0;
-        animation: width0 0.6s ease-in forwards;
+        animation: width0 0.5s ease-in forwards;
     }
     .mainContainer form .searchPoint input[type='search'].active{
-        display: block; animation: width100 0.6s ease-in forwards;
+        display: block; animation: width100 0.5s ease-in forwards;
     }
     .mainContainer form .searchPoint input[type='search']::placeholder{
         color: rgba(50, 44, 43, 0.3);
