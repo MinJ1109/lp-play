@@ -4,7 +4,7 @@ body{background-color: #e4c59e;}
 a{text-decoration: none;}
 li{list-style: none;}
 .btn1{
-    background-color: #322c2b; border-radius: 2rem; transition: background-color 0.5s;
+    background-color: #322c2b; border-radius: 2rem; transition: background-color 0.2s;
     color: #eeeeee; font-weight: 500; font-size: clamp(16px, 1.04vw, 20px);
     padding: 0 clamp(21px, 1.3vw, 25px); line-height: clamp(34px, 2vw, 38px); display: inline-block;
 }
@@ -31,14 +31,32 @@ li{list-style: none;}
     font-size: clamp(18px, 1.14vw, 22px);
 }
 .fts30{
-    font-size: clamp(26px, 1.56vw, 30px);
+    font-size: clamp(23px, 1.56vw, 30px);
+}
+.fts40{
+    font-size: clamp(33px, 2.08vw, 40px);
+}
+.fts70{
+    font-size: clamp(40px, 3.65vw, 70px);
 }
 .fts90{
     font-size: clamp(60px, 4.68vw, 90px);
 }
+.fts100{
+    font-size: clamp(70px, 5.2vw, 100px);
+}
+.fts250{
+    font-size: clamp(240px, 6.25vw, 250px);
+}
 /* ! */
+.fwR{
+    font-weight: 400;
+}
 .ftwM{
     font-weight: 500;
+}
+.fwSB{
+    font-weight: 600;
 }
 .ftwEB{
     font-weight: 800;
@@ -149,25 +167,25 @@ li{list-style: none;}
         z-index: 1;
     }
     .mainContainer > a{
-    display: block; background-color: #af8260; line-height: 2.5rem; width: 6.56rem; text-align: center;
-    color: #eeeeee; border-radius: 2rem; position: fixed; left: 2.08vw; bottom: 3.7vh; z-index: 10;
+        display: block; background-color: #af8260; line-height: 2.5rem; width: 6.56rem; text-align: center;
+        color: #eeeeee; border-radius: 2rem; position: fixed; left: 2.08vw; bottom: 3.7vh; z-index: 10;
     }
     .mainContainer > a:hover,
     .mainContainer form .searchPoint input[type='button']:hover{
-    background-color: #803d3b;
+        background-color: #803d3b;
     }
     .mainContainer form .searchPoint{
-    position: fixed; right: 2.08vw; bottom: 3.7vh;
-    display: flex; align-items: center; z-index: 10;
+        position: fixed; right: 2.08vw; bottom: 3.7vh;
+        display: flex; align-items: center; z-index: 10;
     }
     .mainContainer form .searchPoint *{
-    display: block; float: left;
+        display: block; float: left;
     }
     .mainContainer form .searchPoint input[type='button']{
-    width: 4.37rem; height: 4.37rem; text-indent: -9999px; margin-left: 1.25rem;
-    border: navajowhite; background-color: #af8260; border-radius: 2.18rem;
-    background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 50 50'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23eeeeee; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M20,4c8.8224,0,16,7.1776,16,16s-7.1776,16-16,16S4,28.8224,4,20,11.1776,4,20,4M20,0C8.9543,0,0,8.9543,0,20s8.9543,20,20,20,20-8.9543,20-20S31.0457,0,20,0h0Z'/%3E%3Crect class='cls-1' x='38.5636' y='28.0468' width='4' height='25.0334' rx='2' ry='2' transform='translate(-16.802 40.5636) rotate(-45)'/%3E%3C/svg%3E");
-    background-size: 1.87rem; background-repeat: no-repeat; background-position: center;
+        width: 4.37rem; height: 4.37rem; text-indent: -9999px; margin-left: 1.25rem;
+        border: navajowhite; background-color: #af8260; border-radius: 2.18rem;
+        background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 50 50'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23eeeeee; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M20,4c8.8224,0,16,7.1776,16,16s-7.1776,16-16,16S4,28.8224,4,20,11.1776,4,20,4M20,0C8.9543,0,0,8.9543,0,20s8.9543,20,20,20,20-8.9543,20-20S31.0457,0,20,0h0Z'/%3E%3Crect class='cls-1' x='38.5636' y='28.0468' width='4' height='25.0334' rx='2' ry='2' transform='translate(-16.802 40.5636) rotate(-45)'/%3E%3C/svg%3E");
+        background-size: 1.87rem; background-repeat: no-repeat; background-position: center;
     }
     .mainContainer form .searchPoint:has(input[type='search'].active) input[type='button']{
         background-color: #803d3b;

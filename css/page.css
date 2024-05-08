@@ -1,9 +1,89 @@
 @media screen and (min-width: 1280px){
     .topSlider{
-        margin: 0 auto; padding: 0 3.15vw; display: none;
+        max-width: 1920px; margin: 0 auto 8.75rem; overflow: hidden; position: relative;
+    }
+    .topSlider ul{
+        width: 200vw; max-width: 3840px; margin: 0 auto;
+        transition: transform 0.3s ease-in;
+    }
+    .topSlider ul::after{
+        content: ''; display: block; clear: both;
+    }
+    .topSlider ul li{
+        width: 100vw; padding: 0 3.12vw; max-width: 1920px; 
+        float: left;  box-sizing: border-box;
+        height: clamp(600px, 46.87vw, 900px);
+    }
+    .topSlider ul li:first-child > div{
+        height: 100%;
+        display: flex; align-items: center; background-color: #d1ac78; border-radius: 6.25rem 0;
+    }
+    .topSlider ul li:first-child > div img{
+        width: 45%; max-width: 46.14vw; padding: 3.64% 0 3.64% 3.12%;
+    }
+    .topSlider ul li:first-child > div div{
+        text-align: right; padding-right: 6.25%;
+    }
+    .topSlider ul li:first-child > div div h2{
+        color: #322c2b; margin-bottom: 1.82vw;
+    }
+    .topSlider ul li:first-child > div div h2 span{
+        display: block; margin-bottom: 1.2vw; color: #eeeeee;
+    }
+    .topSlider ul li:first-child > div div p{
+        color: #322c2b;
+    }
+    .topSlider ul li:first-child > div div p:first-of-type{
+        margin-bottom: 2.08vw;
+    }
+    .topSlider ul li:first-child > div div p:last-of-type{
+        line-height: 2.5rem; margin-bottom: 2.6vw;
+    }
+    .topSlider ul li:first-child > div div a,
+    .topSlider ul li:last-child > div div a{
+        line-height: clamp(56px, 3.12vw, 60px);
     }
 
+    .topSlider ul li:last-child > div{
+        background-color: #f6e613; border-radius: 6.25rem 0;
+        display: flex; align-items: center; background-repeat: no-repeat;
+        background-image: url('../images/slide_vinyl_record.png');
+        background-size: contain; height: 100%;
+    }
+    .topSlider ul li:last-child > div div{
+        width: 55%; text-align: right; padding-right: 3.12vw;
+    }
+    .topSlider ul li:last-child > div div h2{
+        font-style: italic; color: #322c2b; margin-bottom: 3.12vw;
+    }
+    .topSlider ul li:last-child > div div h2 span{
+        display: block; color: #9a900f; margin-bottom: 1.04vw;
+        font-style: normal;
+    }
+    .topSlider ul li:last-child > div div a:hover{
+        background-color: #9a900f;
+    }
+    .topSlider ul li:last-child > div img{
+        width: 45%; max-width: 46.14vw; padding: 3.64% 3.12% 3.64% 0;
+    }
 
+    .topSlider > span{
+        display: block; position: absolute; z-index: 2; bottom: 1.04vw; left: 50%; transform: translateX(-50%);
+    }
+    .topSlider > span input{
+        display: inline-block; background-color: rgba(128, 61, 59, 0.6); border: navajowhite; cursor: pointer;
+        text-indent: -9999px; width: clamp(40px, 2.8vw, 50px); height: 0.31vw; border-radius: 1vw;
+    }
+    .topSlider > span input:not(:first-of-type){
+        margin-left: 0.31vw;
+    }
+    .topSlider > span input.active{
+        width: clamp(25px, 1.3vw, 35px); height: clamp(25px, 1.3vw, 35px); border-radius: 0;
+        background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 50 50'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23803d3b; %7D .cls-1, .cls-2 %7B stroke-width: 0px; %7D .cls-2 %7B fill: %23995858; %7D %3C/style%3E%3C/defs%3E%3Cellipse class='cls-1' cx='18.0226' cy='35' rx='18.0226' ry='15'/%3E%3Cpath class='cls-1' d='M36.2988,2.7556c0-2.1477-3.239-4.2814-4.8373-1.2478-.2757.5233-.3821,1.121-.3821,1.7125v31.6023c0,1.3278.9535,2.5527,2.2763,2.6677,1.4815.1288,2.7237-1.0356,2.7237-2.4902l.1086-17.23c.1086.0485.2151.0991.3335.1374,5.5812,1.8074,8.8962,6.0539,7.0112,9.5535-.3106.5767-.7168,1.724-.3593,2.3.4348.7004,1.5745.7303,2.1667.3217,8.1851-5.6459,4.2003-17.2797-1.3704-20.0802-5.5707-2.8005-7.671-4.6155-7.671-7.2468Z'/%3E%3Cpath class='cls-2' d='M-4.7341,32.5364'/%3E%3C/svg%3E");
+        background-size: contain; background-repeat: no-repeat; background-color: transparent;
+    }
+
+    /* * */
 
     .lastMonthTop3{
         padding: 0 13.75vw; margin: 0 auto 10rem; box-sizing: border-box;
