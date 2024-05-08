@@ -12,55 +12,25 @@ li{list-style: none;}
     background-color: #803d3b;
 }
 /* ! */
-.fts14{
-    font-size: clamp(10px, 0.83vw, 14px);
-}
-.fts15{
-    font-size: clamp(11px, 0.78vw, 15px);
-}
-.fts16{
-    font-size: clamp(12px, 0.83vw, 16px);
-}
-.fts18{
-    font-size: clamp(14px, 0.93vw, 18px);
-}
-.fts20{
-    font-size: clamp(16px, 1.04vw, 20px);
-}
-.fts22{
-    font-size: clamp(18px, 1.14vw, 22px);
-}
-.fts30{
-    font-size: clamp(23px, 1.56vw, 30px);
-}
-.fts40{
-    font-size: clamp(33px, 2.08vw, 40px);
-}
-.fts70{
-    font-size: clamp(40px, 3.65vw, 70px);
-}
-.fts90{
-    font-size: clamp(60px, 4.68vw, 90px);
-}
-.fts100{
-    font-size: clamp(70px, 5.2vw, 100px);
-}
-.fts250{
-    font-size: clamp(240px, 6.25vw, 250px);
-}
+.fts14{font-size: clamp(10px, 0.83vw, 14px);}
+.fts15{font-size: clamp(11px, 0.78vw, 15px);}
+.fts16{font-size: clamp(12px, 0.83vw, 16px);}
+.fts18{font-size: clamp(14px, 0.93vw, 18px);}
+.fts20{font-size: clamp(16px, 1.04vw, 20px);}
+.fts22{font-size: clamp(18px, 1.14vw, 22px);}
+.fts30{font-size: clamp(23px, 1.56vw, 30px);}
+.fts40{font-size: clamp(33px, 2.08vw, 40px);}
+.fts50{font-size: clamp(43px, 2.6vw, 50px);}
+.fts70{font-size: clamp(40px, 3.65vw, 70px);}
+.fts90{font-size: clamp(60px, 4.68vw, 90px);}
+.fts100{font-size: clamp(70px, 5.2vw, 100px);}
+.fts250{font-size: clamp(240px, 6.25vw, 250px);}
 /* ! */
-.fwR{
-    font-weight: 400;
-}
-.ftwM{
-    font-weight: 500;
-}
-.fwSB{
-    font-weight: 600;
-}
-.ftwEB{
-    font-weight: 800;
-}
+.fwR{font-weight: 400;}
+.ftwM{font-weight: 500;}
+.fwSB{font-weight: 600;}
+.ftwB{font-weight: 700;}
+.ftwEB{font-weight: 800;}
 
 @keyframes rotate{
     100%{
@@ -81,10 +51,25 @@ li{list-style: none;}
         width: 25rem; padding: 0 1.56rem; 
     }
 }
+@keyframes spin {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes heart{
+    0%{
+        transform: scale(1.3);
+    }100%{
+        transform: scale(1);
+    }
+}
 
 @media screen and (min-width: 1280px){
     header{
-        padding: 2.31vh 2.08vw; position: sticky; top: 0; z-index: 10;
+        padding: 2.31vh 2.08vw; position: sticky; width: 100%; box-sizing: border-box; top: 0; z-index: 10;
     }
     header > div{
         background-color: #af8260; padding: 0 2.08vw; box-sizing: border-box; border-radius: 3rem;
@@ -164,7 +149,8 @@ li{list-style: none;}
     }
 
     .mainContainer{
-        z-index: 1;
+        z-index: 1; 
+        /* padding-top: clamp(100px, 5.11vw, 200px); */
     }
     .mainContainer > a{
         display: block; background-color: #af8260; line-height: 2.5rem; width: 6.56rem; text-align: center;
