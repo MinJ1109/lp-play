@@ -4,6 +4,7 @@ $(document).ready(function(){
     searchonoff();
     topslide();
     wishlistH();
+    discountSlide();
 });
 
 function navslide(){
@@ -41,3 +42,31 @@ function wishlistH(){
     });
 }
 
+function discountSlide(){
+    var slidetool = $('.discount > div div'); 
+    var slidebox = $('.discount > div div ul');
+    var slideChildren = $('.discount > div div ul li');
+    var prevBtn = $("input[value='이전']");
+    var nextBtn = $("input[value='다음']");
+
+    var currentPosition = 0;
+    var maxPosition = 0;
+    var childWidth = slideChildren.eq(0).outerWidth() * 1.5;
+    
+    nextBtn.click(function(){
+        maxPosition = slidebox[0].scrollWidth - slidetool.width();
+    
+        if(currentPosition > -maxPosition){ 
+            currentPosition -= childWidth;
+            currentPosition = Math.max(currentPosition, -maxPosition);
+            slidebox.css('transform', "translateX("+currentPosition+"px)");
+        }
+    });
+    prevBtn.click(function(){
+        if(currentPosition < 0){
+            currentPosition += childWidth;
+            currentPosition = Math.min(currentPosition, 0);
+            slidebox.css('transform', "translateX("+ currentPosition+"px)");
+        }
+    });
+}
