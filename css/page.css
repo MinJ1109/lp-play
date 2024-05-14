@@ -67,7 +67,7 @@
         background-color: #9a900f;
     }
     .topSlider ul li:last-child > div img{
-        max-width: 800px; padding: 3.64% 3.12% 3.64% 0;
+        width: 50%; max-width: 800px; padding: 3.64% 3.12% 3.64% 0;
     }
 
     .topSlider > span{
