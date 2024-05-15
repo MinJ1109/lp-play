@@ -3,11 +3,6 @@
 body{background-color: #e4c59e;}
 a{text-decoration: none;}
 li{list-style: none;}
-.btn1{
-    background-color: #322c2b; border-radius: 2rem; transition: background-color 0.2s;
-    color: #eeeeee; font-weight: 500; font-size: clamp(16px, 1.04vw, 20px);
-    padding: 0 clamp(21px, 1.3vw, 25px); line-height: clamp(34px, 2vw, 38px); display: inline-block;
-}
 .btn1:hover{
     background-color: #803d3b;
 }
@@ -69,16 +64,30 @@ li{list-style: none;}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px){
+    .fts16{font-size: clamp(10px, 0.83vw, 14px);}
+    .fts18{font-size: clamp(11px, 0.78vw, 15px);}
+    .fts20{font-size: clamp(12px, 0.83vw, 16px);}
+    .fts22{font-size: clamp(14px, 0.93vw, 18px);}
+    .fts30{font-size: clamp(15px, 1.04vw, 30px);}
+    .fts40{font-size: clamp(20px, 1.56vw, 40px);}
+    .fts50{font-size: clamp(23px, 1.56vw, 30px);}
+    .fts90{font-size: clamp(30px, 3.12vw, 60px);}
+    .fts100{font-size: clamp(40px, 3.67vw, 70px);}
+    .btn1{
+        background-color: #322c2b; border-radius: 2rem; transition: background-color 0.2s;
+        color: #eeeeee; font-weight: 500; font-size: clamp(11px, 0.78vw, 15px);
+        padding: 0 clamp(21px, 1.3vw, 25px); line-height: clamp(30px, 2vw, 35px); display: inline-block;
+    }
     header{
-        padding: 2.31vh 2.08vw; position: sticky; width: 100%; box-sizing: border-box; top: 0; z-index: 10;
+        padding: 1.66vh 1.3vw; position: sticky; width: 100%; box-sizing: border-box; top: 0; z-index: 10;
     }
     header > div{
-        background-color: #af8260; padding: 0 2.08vw; box-sizing: border-box; border-radius: 3rem;
+        background-color: #af8260; padding: 0 1.3vw; box-sizing: border-box; border-radius: 3rem;
         display: flex; align-items: center; justify-content: space-between;
     }
 
     header > div h1{
-        min-width: 7.06rem; max-width: 7.06rem;
+        min-width: 5rem; max-width: 5rem;
     }
     header > div h1 a{
         display: block;
@@ -98,7 +107,7 @@ li{list-style: none;}
         float: left; position: relative;
     }
     header > div nav ul > li:not(:first-of-type){
-        margin-left: 6.25vw;
+        margin-left: 4.16vw;
     }
     header > div nav ul > li a{
         display: block; color: #eeeeee;
@@ -109,12 +118,12 @@ li{list-style: none;}
         color: #803d3b;
     }
     header > div nav ul > li > a{
-        line-height: clamp(26px, 1.56vw, 30px); position: relative;
-        padding: clamp(21px, 1.03vw, 25px) 0 clamp(21px, 1.03vw, 25px) clamp(36px, 1.03vw, 40px); 
+        line-height: clamp(15px, 1.04vw, 20px); position: relative;
+        padding: clamp(18px, 1.03vw, 20px) 0 clamp(18px, 1.03vw, 20px) clamp(26px, 1.03vw, 30px); 
     }
     header > div nav ul > li > a::before{
         content:''; background: url('../images/ico_record.svg') left center no-repeat; top: 0; left: 0; 
-        max-width: 1.88rem; width: 100%; height: 100%; display: block; position: absolute;
+        max-width: 1.25rem; width: 100%; height: 100%; display: block; position: absolute;
     }
     header > div nav ul > li:hover > a::before{
         background-image: url('../images/ico_record_hov.svg');
@@ -122,14 +131,14 @@ li{list-style: none;}
     }
     header > div nav ul > li ol{
         display: none;
-        position: absolute; top: clamp(78px, 4.68vw, 90px); background-color: #af8260; 
-        left: 50%; transform: translateX(-50%); border-radius: 20px;
+        position: absolute; top: clamp(60px, 4.68vw, 70px); background-color: #af8260; 
+        left: 50%; transform: translateX(-50%); border-radius: 15px;
     }
     header > div nav ul > li ol li{
         text-align: center;
     }
     header > div nav ul > li ol li a{
-        padding: 0 1.25rem; line-height: clamp(46px, 2.6vw, 50px); 
+        padding: 0 0.93rem; line-height: clamp(46px, 2.08vw, 50px); 
     }
     
     header > div div{
@@ -140,38 +149,38 @@ li{list-style: none;}
     }
     header > div div a:first-child,
     header > div div a:nth-of-type(2){
-        padding-right: 1.56vw;
+        padding-right: 1.04vw;
     }
     header > div div a:not(:first-child){
-        padding-left: 1.56vw; position: relative;
+        padding-left: 1.04vw; position: relative;
     }
-    header > div div a:not(:first-child)::before{
-        content: '|'; position: absolute; left: 0; color: #eeeeee;
+    header > div div span{
+        color: #eeeeee;
     }
 
     .mainContainer{
         z-index: 1; 
     }
     .mainContainer > a{
-        display: block; background-color: #af8260; line-height: 2.5rem; width: 6.56rem; text-align: center;
-        color: #eeeeee; border-radius: 2rem; position: fixed; left: 2.08vw; bottom: 3.7vh; z-index: 10;
+        display: block; background-color: #af8260; line-height: 2.2rem; width: 5.93rem; text-align: center;
+        color: #eeeeee; border-radius: 2rem; position: fixed; left: 1.3vw; bottom: 2.3vh; z-index: 10;
     }
     .mainContainer > a:hover,
     .mainContainer form .searchPoint input[type='button']:hover{
         background-color: #803d3b;
     }
     .mainContainer form .searchPoint{
-        position: fixed; right: 2.08vw; bottom: 3.7vh;
+        position: fixed; right: 1.3vw; bottom: 2.3vh;
         display: flex; align-items: center; z-index: 10;
     }
     .mainContainer form .searchPoint *{
         display: block; float: left;
     }
     .mainContainer form .searchPoint input[type='button']{
-        width: 4.37rem; height: 4.37rem; text-indent: -9999px; margin-left: 1.25rem;
+        width: 3.12rem; height: 3.12rem; text-indent: -9999px; margin-left: 0.93rem;
         border: none; background-color: #af8260; border-radius: 2.18rem;
         background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 50 50'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23eeeeee; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M20,4c8.8224,0,16,7.1776,16,16s-7.1776,16-16,16S4,28.8224,4,20,11.1776,4,20,4M20,0C8.9543,0,0,8.9543,0,20s8.9543,20,20,20,20-8.9543,20-20S31.0457,0,20,0h0Z'/%3E%3Crect class='cls-1' x='38.5636' y='28.0468' width='4' height='25.0334' rx='2' ry='2' transform='translate(-16.802 40.5636) rotate(-45)'/%3E%3C/svg%3E");
-        background-size: 1.87rem; background-repeat: no-repeat; background-position: center;
+        background-size: 1.25rem; background-repeat: no-repeat; background-position: center;
     }
     .mainContainer form .searchPoint:has(input[type='search'].active) input[type='button']{
         background-color: #803d3b;
@@ -194,20 +203,20 @@ li{list-style: none;}
         background-color: #af8260; z-index: 1;
     }
     footer{
-        position: relative; padding: 2.81rem 2.08vw; text-align: center;
+        position: relative; padding: 1.87rem 1.3vw; text-align: center;
     }
     footer > a{
         position: absolute; display: block;
-        top: -2.18rem;  padding: 0 2.08vw; border-radius: 2.18rem;
+        top: -1.56rem;  padding: 0 1.3vw; border-radius: 2.18rem;
     }
     footer > a img{
-        display: block; min-width: 7.06rem; max-width: 7.06rem; height: 4.37rem;
+        display: block; min-width: 5rem; max-width: 5rem; height: 3.12rem;
     }
     footer div{
-        position: absolute; right: 2.08vw; top: -2.18rem;
+        position: absolute; right: 1.3vw; top: -1.56rem;
     }
     footer div a{
-        display: block; text-indent: -9999px; width: 4.37rem; height: 4.37rem; float: left;
+        display: block; text-indent: -9999px; width: 3.12rem; height: 3.12rem; float: left;
         border-radius: 2.18rem; background-position: center; background-repeat: no-repeat;
         background-size: 47%; transition: background-color 0.3s ease-in;
     }
@@ -227,7 +236,7 @@ li{list-style: none;}
         background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 50 50'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23eeeeee; fill-rule: evenodd; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M44.3141,7.5H5.6859c-3.1402,0-5.6859,2.5457-5.6859,5.6859v23.6283c0,3.1402,2.5457,5.6859,5.6859,5.6859h38.6283c3.1402,0,5.6859-2.5457,5.6859-5.6859V13.1859c0-3.1402-2.5457-5.6859-5.6859-5.6859ZM32.8711,26.3383l-11.6836,6.7455c-1.0302.5948-2.3179-.1487-2.3179-1.3382v-13.4911c0-1.1895,1.2877-1.933,2.3179-1.3382l11.6836,6.7455c1.0302.5948,1.0302,2.0817,0,2.6765Z'/%3E%3C/svg%3E");
     }
     footer ul{
-        display: flex; justify-content: center; margin-bottom: 2.18rem;
+        display: flex; justify-content: center; margin-bottom: 1.56rem;
     }
     footer ul li:not(:first-child){
         margin-left: 3.15rem;
@@ -244,6 +253,11 @@ li{list-style: none;}
 }
 
 @media screen and (min-width: 1280px){
+    .btn1{
+        background-color: #322c2b; border-radius: 2rem; transition: background-color 0.2s;
+        color: #eeeeee; font-weight: 500; font-size: clamp(16px, 1.04vw, 20px);
+        padding: 0 clamp(21px, 1.3vw, 25px); line-height: clamp(34px, 2vw, 38px); display: inline-block;
+    }
     header{
         padding: 2.31vh 2.08vw; position: sticky; width: 100%; box-sizing: border-box; top: 0; z-index: 10;
     }
@@ -320,8 +334,8 @@ li{list-style: none;}
     header > div div a:not(:first-child){
         padding-left: 1.56vw; position: relative;
     }
-    header > div div a:not(:first-child)::before{
-        content: '|'; position: absolute; left: 0; color: #eeeeee;
+    header > div div span{
+        color: #eeeeee;
     }
 
     .mainContainer{
