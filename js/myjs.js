@@ -81,6 +81,12 @@ function navclick(){
     accBtn.click(function(){
         accTarget.toggleClass('active');
         navTarget.removeClass('active');
+        
+        if(navTarget.hasClass('active')){
+            $(navBtn).text('close');
+        }else{
+            $(navBtn).text('menu');
+        }
     });
 
     navBtn.click(function(){
