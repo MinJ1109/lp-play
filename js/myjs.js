@@ -52,7 +52,7 @@ function discountSlide(){
 
     var currentPosition = 0;
     var maxPosition = 0;
-    var childWidth = slideChildren.eq(0).outerWidth();
+    var childWidth = slideChildren.eq(0).outerWidth(true);
     
     nextBtn.click(function(){
         maxPosition = slidebox[0].scrollWidth - slidetool.width();
@@ -81,7 +81,7 @@ function navclick(){
     accBtn.click(function(){
         accTarget.toggleClass('active');
         navTarget.removeClass('active');
-        
+
         if(navTarget.hasClass('active')){
             $(navBtn).text('close');
         }else{
