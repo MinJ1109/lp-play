@@ -5,6 +5,7 @@ $(document).ready(function(){
     topslide();
     wishlistH();
     discountSlide();
+    navclick();
 });
 
 function navslide(){
@@ -51,7 +52,7 @@ function discountSlide(){
 
     var currentPosition = 0;
     var maxPosition = 0;
-    var childWidth = slideChildren.eq(0).outerWidth() * 1.5;
+    var childWidth = slideChildren.eq(0).outerWidth();
     
     nextBtn.click(function(){
         maxPosition = slidebox[0].scrollWidth - slidetool.width();
@@ -67,6 +68,29 @@ function discountSlide(){
             currentPosition += childWidth;
             currentPosition = Math.min(currentPosition, 0);
             slidebox.css('transform', "translateX("+ currentPosition+"px)");
+        }
+    });
+}
+
+function navclick(){
+    var navBtn = $('span[data-panel="mobileNavPanel"]');
+    var navTarget = $('#mobileNavPanel > ul');
+    var accBtn = $('span[data-panel="accountPanel"]');
+    var accTarget = $('#accountPanel');
+
+    accBtn.click(function(){
+        accTarget.toggleClass('active');
+        navTarget.removeClass('active');
+    });
+
+    navBtn.click(function(){
+        navTarget.toggleClass('active');
+        accTarget.removeClass('active');
+
+        if(navTarget.hasClass('active')){
+            $(this).text('close');
+        }else{
+            $(this).text('menu');
         }
     });
 }

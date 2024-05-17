@@ -63,6 +63,202 @@ li{list-style: none;}
     }
 }
 
+@media screen and (max-width: 767px){
+    .fts16{font-size: clamp(11px, 0.83vw, 14px);}
+    .fts18{font-size: clamp(11px, 0.78vw, 15px);}
+    .fts20{font-size: clamp(12px, 0.83vw, 16px);}
+    .fts22{font-size: clamp(12px, 0.93vw, 16px);}
+    .fts30{font-size: clamp(13px, 1.04vw, 18px);}
+    .fts40{font-size: clamp(13px, 1.56vw, 20px);}
+    .fts50{font-size: clamp(20px, 1.56vw, 30px);}
+    .fts70{font-size: clamp(15px, 3.65vw, 20px);}
+    .fts90{font-size: clamp(20px, 3.12vw, 30px);}
+    .fts100{font-size: clamp(20px, 3.67vw, 30px);}
+    .btn1{
+        background-color: #322c2b; border-radius: 2rem; transition: background-color 0.2s;
+        color: #eeeeee; font-weight: 500; font-size: clamp(9px, 0.78vw, 13px);
+        padding: 0 clamp(15px, 1.3vw, 20px); line-height: clamp(30px, 2vw, 35px); display: inline-block;
+    }
+    header{
+        padding: 0 0 1vh; position: sticky; width: 100%; box-sizing: border-box; top: 0; z-index: 10;
+    }
+    header > div{
+        background-color: #af8260; padding: 5px 10px; box-sizing: border-box;
+        display: flex; align-items: center; height: 50px;
+    }
+
+    header > div h1{
+        min-width: 4rem; max-width: 4rem;
+    }
+    header > div h1 a{
+        display: block;
+    }
+    header > div h1 a img{
+        width: 100%;
+    }
+
+    header > div > span.material-icons{
+        color: #eeeeee; display: block; margin-left: auto; margin-right: 10px;
+    }
+    header > div nav ul{
+        width: 100%; position: fixed; right: 0; top: 50px;
+        background-color: #af8260; display: none;
+    }
+    header > div nav ul.active{
+        display: block;
+    }
+    header > div nav ul > li{
+        border-top: 1px solid #a17757; box-sizing: border-box;
+    }
+    header > div nav ul > li a{
+        display: block; color: #eeeeee; text-align: center;
+    }
+    header > div nav ul > li:hover > a,
+    header > div nav ul > li ol li:hover a,
+    header > div div a:hover{
+        color: #803d3b;
+    }
+    header > div nav ul > li > a{
+        line-height: clamp(15px, 1.04vw, 20px); position: relative;
+        padding: clamp(18px, 1.03vw, 20px) clamp(18px, 1.03vw, 20px); 
+    }
+    header > div nav ul > li ol{
+        background-color: #a17757; display: none;
+    }
+    header > div nav ul > li ol li{
+        text-align: center; 
+    }
+    header > div nav ul > li ol li a{
+        padding: 0 0.93rem; line-height: clamp(46px, 2.08vw, 50px); 
+    }
+    
+    
+    header > div div span{
+        color: #eeeeee;
+    }
+    header > div div div{
+        display: none; position: absolute; background-color: #af8260; width: 100%; left: 0; top: 50px;
+    }
+    header > div div div.active{
+        display: block;
+    }
+    header > div div div span{
+        display: none;
+    }
+    header > div div a{
+        color: #eeeeee; line-height: clamp(46px, 2.6vw, 50px); 
+        display: block; text-align: center; border-top: 1px solid #a17757;box-sizing: border-box;
+    }
+
+    .mainContainer{
+        z-index: 1; 
+    }
+    .mainContainer > a{
+        display: none;
+    }
+    .mainContainer form .searchPoint input[type='button']:hover{
+        background-color: #803d3b;
+    }
+    .mainContainer form .searchPoint{
+        position: fixed; right: 10px; bottom: 10px;
+        display: flex; align-items: center; z-index: 10;
+    }
+    .mainContainer form .searchPoint *{
+        display: block; float: left;
+    }
+    .mainContainer form .searchPoint input[type='button']{
+        width: 3.12rem; height: 3.12rem; text-indent: -9999px; margin-left: 0.62rem;
+        border: none; background-color: #af8260; border-radius: 2.18rem;
+        background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 50 50'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23eeeeee; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M20,4c8.8224,0,16,7.1776,16,16s-7.1776,16-16,16S4,28.8224,4,20,11.1776,4,20,4M20,0C8.9543,0,0,8.9543,0,20s8.9543,20,20,20,20-8.9543,20-20S31.0457,0,20,0h0Z'/%3E%3Crect class='cls-1' x='38.5636' y='28.0468' width='4' height='25.0334' rx='2' ry='2' transform='translate(-16.802 40.5636) rotate(-45)'/%3E%3C/svg%3E");
+        background-size: 1.25rem; background-repeat: no-repeat; background-position: center;
+    }
+    .mainContainer form .searchPoint:has(input[type='search'].active) input[type='button']{
+        background-color: #803d3b;
+    }
+    .mainContainer form .searchPoint input[type='search']{
+        width: 0; line-height: 2.87rem; border: #803d3b solid 2px;
+        color: #322c2b; border-radius: 1.56rem 0;
+        animation: width0 0.5s ease-in forwards;
+    }
+    .mainContainer form .searchPoint input[type='search'].active{
+        display: block; animation: width100 0.5s ease-in forwards;
+    }
+    @keyframes width0{
+        0%{
+            width: 70vw; padding: 0 1.56rem; 
+        }100%{
+            width: 0; padding: 0; display: none;
+        }
+    }
+    @keyframes width100{
+        0%{
+            width: 0; padding: 0;
+        }100%{
+            width: 70vw; padding: 0 1rem; 
+        }
+    }
+    .mainContainer form .searchPoint input[type='search']::placeholder{
+        color: rgba(50, 44, 43, 0.3);
+    }
+
+    footer,
+    footer > a,
+    footer div a{
+        background-color: #af8260; z-index: 1;
+    }
+    footer{
+        position: relative; padding: 1.87rem 10px; text-align: center; box-sizing: border-box;
+    }
+    footer > a{
+        position: absolute; display: block; left: 0;
+        top: -1.25rem; padding: 0 20px; border-top-right-radius: 20px;
+    }
+    footer > a img{
+        display: block; min-width: 4rem; max-width: 4rem; height: 2.5rem;
+    }
+    footer div{
+        position: absolute; right: 1.3vw; top: -1.25rem;right: 0;
+    }
+    footer div a{
+        display: block; text-indent: -9999px; width: 2.5rem; height: 2.5rem; float: left;
+        border-radius: 2.18rem; background-position: center; background-repeat: no-repeat;
+        background-size: 47%; transition: background-color 0.3s ease-in;
+    }
+    footer div a:hover{
+        background-color: #803d3b;
+    }
+    footer div a:not(:first-child){
+        margin-left: 0.31rem;
+    }
+    footer div a:nth-child(1){
+        background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 50 50'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23eeeeee; fill-rule: evenodd; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M25-.5c-6.7709,0-7.6042,0-10.3126.1042-2.7083.1042-4.4792.5208-6.0417,1.1458-1.6666.625-3.0209,1.4583-4.4792,2.9167-1.3542,1.3542-2.2917,2.8125-2.9167,4.4792C.625,9.7083.2083,11.5833.1041,14.1875c-.1041,2.7083-.1041,3.5417-.1041,10.3125s0,7.6042.1041,10.3125.5208,4.4792,1.1458,6.0417c.625,1.6667,1.4584,3.0208,2.9167,4.4792,1.3542,1.3542,2.8125,2.2917,4.4792,2.9167,1.5625.625,3.4375,1.0417,6.0417,1.1458,2.7083.1042,3.5417.1042,10.3126.1042s7.6042,0,10.3126-.1042c2.7083-.1042,4.4792-.5208,6.0417-1.1458,1.6666-.625,3.0209-1.4583,4.4792-2.9167,1.3542-1.3542,2.2917-2.8125,2.9167-4.4792.625-1.5625,1.0417-3.4375,1.1458-6.0417.1041-2.7083.1041-3.5417.1041-10.3125s0-7.6042-.1041-10.3125-.5208-4.4792-1.1458-6.0417c-.625-1.6667-1.4584-3.0208-2.9167-4.4792-1.3542-1.3542-2.8125-2.2917-4.4792-2.9167-1.5625-.625-3.4375-1.0417-6.0417-1.1458-2.7084-.1042-3.5417-.1042-10.3126-.1042ZM25,3.9791c6.6667,0,7.5,0,10.1042.1042,2.3958.1042,3.75.5208,4.6875.8333,1.1458.4167,1.9792,1.0417,2.9167,1.875.8333.8333,1.4584,1.6667,1.875,2.9167.3125.8333.7292,2.1875.8333,4.6875.1041,2.6042.1041,3.4375.1041,10.1042s0,7.5-.1041,10.1042c-.1041,2.3958-.5208,3.75-.8333,4.6875-.4167,1.1458-1.0417,1.9792-1.875,2.9167-.8333.8333-1.6666,1.4583-2.9167,1.875-.8333.3125-2.1875.7292-4.6875.8333-2.6042.1042-3.4375.1042-10.1042.1042s-7.5,0-10.1042-.1042c-2.3958-.1042-3.75-.5208-4.6875-.8333-1.1458-.4167-1.9792-1.0417-2.9167-1.875-.8333-.8333-1.4584-1.6667-1.875-2.9167-.3125-.8333-.7292-2.1875-.8333-4.6875-.1041-2.6042-.1041-3.4375-.1041-10.1042s0-7.5.1041-10.1042c.1041-2.3958.5208-3.75.8333-4.6875.4167-1.1458,1.0417-1.9792,1.875-2.9167.8333-.8333,1.6666-1.4583,2.9167-1.875.8333-.3125,2.1875-.7292,4.6875-.8333,2.6042-.1042,3.4375-.1042,10.1042-.1042ZM25,11.6875c-7.0833,0-12.8125,5.7292-12.8125,12.8125s5.7292,12.8125,12.8125,12.8125,12.8125-5.7292,12.8125-12.8125-5.7292-12.8125-12.8125-12.8125ZM25,32.8334c-4.5834,0-8.3334-3.75-8.3334-8.3334s3.75-8.3334,8.3334-8.3334,8.3334,3.75,8.3334,8.3334-3.75,8.3334-8.3334,8.3334ZM41.3542,11.1667c0,1.6667-1.3542,3.0208-3.0209,3.0208s-3.0209-1.3542-3.0209-3.0208,1.3542-3.0208,3.0209-3.0208c1.6667,0,3.0209,1.3542,3.0209,3.0208Z'/%3E%3C/svg%3E");
+    }
+    footer div a:nth-child(2){
+        background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 50 50'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23eeeeee; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M28.8235,50v-22.9412h7.9412l1.1765-8.8235h-9.1176v-5.5882c0-2.6471.5882-4.4118,4.4118-4.4118h5V.2941c-.8824,0-3.5294-.2941-7.0588-.2941-7.0588,0-11.7647,4.1176-11.7647,11.7647v6.4706h-7.6471v8.8235h7.9412v22.9412h9.1176Z'/%3E%3C/svg%3E");
+    }
+    footer div a:nth-child(3){
+        background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 50 50'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23eeeeee; fill-rule: evenodd; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M44.3141,7.5H5.6859c-3.1402,0-5.6859,2.5457-5.6859,5.6859v23.6283c0,3.1402,2.5457,5.6859,5.6859,5.6859h38.6283c3.1402,0,5.6859-2.5457,5.6859-5.6859V13.1859c0-3.1402-2.5457-5.6859-5.6859-5.6859ZM32.8711,26.3383l-11.6836,6.7455c-1.0302.5948-2.3179-.1487-2.3179-1.3382v-13.4911c0-1.1895,1.2877-1.933,2.3179-1.3382l11.6836,6.7455c1.0302.5948,1.0302,2.0817,0,2.6765Z'/%3E%3C/svg%3E");
+    }
+    footer ul{
+        margin-bottom: 1.56rem; text-align: center;
+    }
+    footer ul::after{
+        content: ''; display: block; clear: both;
+    }
+    footer ul li{
+        float: left; width: 33.33%;
+    }
+    footer ul li a{
+        display: block; color: #eeeeee; line-height: 1.87rem;
+    }
+    footer ul li a:hover{
+        color: #803d3b;
+    }
+    footer p{
+        color: rgba(238, 238, 238, 0.5); line-height: 1.25rem;
+    }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1279px){
     .fts16{font-size: clamp(10px, 0.83vw, 14px);}
     .fts18{font-size: clamp(11px, 0.78vw, 15px);}
@@ -96,7 +292,7 @@ li{list-style: none;}
         width: 100%;
     }
 
-    header > div span.material-icons{
+    header > div > span.material-icons{
         display: none;
     }
 
@@ -144,6 +340,12 @@ li{list-style: none;}
     header > div div{
         text-align: right; 
     }
+    header > div div span.material-icons{
+        display: none;
+    }
+    header > div div span{
+        color: #eeeeee;
+    }
     header > div div a{
         color: #eeeeee; line-height: clamp(46px, 2.6vw, 50px); 
     }
@@ -153,9 +355,6 @@ li{list-style: none;}
     }
     header > div div a:not(:first-child){
         padding-left: 1.04vw; position: relative;
-    }
-    header > div div span{
-        color: #eeeeee;
     }
 
     .mainContainer{
@@ -276,7 +475,7 @@ li{list-style: none;}
         width: 100%;
     }
 
-    header > div span.material-icons{
+    header > div > span.material-icons{
         display: none;
     }
 
@@ -323,6 +522,12 @@ li{list-style: none;}
     
     header > div div{
         text-align: right; 
+    }    
+    header > div div span.material-icons{
+        display: none;
+    }
+    header > div div span{
+        color: #eeeeee;
     }
     header > div div a{
         color: #eeeeee; line-height: clamp(46px, 2.6vw, 50px); 
@@ -334,9 +539,7 @@ li{list-style: none;}
     header > div div a:not(:first-child){
         padding-left: 1.56vw; position: relative;
     }
-    header > div div span{
-        color: #eeeeee;
-    }
+
 
     .mainContainer{
         z-index: 1; 

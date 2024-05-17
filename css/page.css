@@ -1,3 +1,336 @@
+@media screen and (max-width: 767px){
+    .topSlider{
+        margin: 0 0 3.12rem; overflow: hidden; position: relative;
+    }
+    .topSlider ul{
+        width: 200vw; transition: transform 0.5s ease-in;
+    }
+    .topSlider ul::after{
+        content: ''; display: block; clear: both;
+    }
+    .topSlider ul li{
+        width: 100vw; padding: 0 10px; float: left;  box-sizing: border-box; 
+        height: 70vw;
+    }
+    .topSlider ul li:first-child > div img,
+    .topSlider ul li:first-child > div div *:not(a),
+    .topSlider ul li:last-child > div img,
+    .topSlider ul li:last-child > div div *:not(a){
+        pointer-events: none; user-select: none;
+    }
+    .topSlider ul li:first-child > div{
+        height: 100%; justify-content: center;
+        display: flex; align-items: center;
+        background-color: #d1ac78; border-radius: 8vw 0;
+    }
+    .topSlider ul li:first-child > div img{
+        width: 50%; padding-left: 2.34vw; 
+    }
+    .topSlider ul li:first-child > div div{
+        text-align: right; width: 50%; padding-right: 6.25%;
+    }
+    .topSlider ul li:first-child > div div h2{
+        color: #322c2b; margin-bottom: 4vw;
+    }
+    .topSlider ul li:first-child > div div h2 span{
+        display: block; margin-bottom: 1.2vw; color: #eeeeee;
+    }
+    .topSlider ul li:first-child > div div p{
+        color: #322c2b;
+    }
+    .topSlider ul li:first-child > div div p:first-of-type{
+        display: none;
+    }
+    .topSlider ul li:first-child > div div p:last-of-type{
+        display: none;
+    }
+    .topSlider ul li:last-child > div{
+        height: 100%; border-radius: 8vw 0;
+        display: flex; align-items: center;
+        background: url('../images/slide_vinyl_record.png') #f6e613 left bottom / contain no-repeat;
+    }
+    .topSlider ul li:last-child > div div{
+        width: 60%; text-align: right; padding-right: 2.34vw; flex-grow: 1.5;
+    }
+    .topSlider ul li:last-child > div div h2{
+        font-style: italic; color: #322c2b; margin-bottom: 3.12vw;
+    }
+    .topSlider ul li:last-child > div div h2 span{
+        display: block; color: #9a900f; margin-bottom: 1.04vw;
+        font-style: normal;
+    }
+    .topSlider ul li:last-child > div div a:hover{
+        background-color: #9a900f;
+    }
+    .topSlider ul li:last-child > div img{
+        flex-grow: 2; width: 40%; max-width: 550px;
+        padding: 3.64% 3.12% 3.64% 0;
+    }
+
+    .topSlider > span{
+        display: block; position: absolute; z-index: 2; bottom: 1vw; left: 50%; transform: translateX(-50%);
+    }
+    .topSlider > span input{
+        display: inline-block; background-color: rgba(128, 61, 59, 0.6); border: none; cursor: pointer;
+        text-indent: -9999px; width: clamp(15px, 2.18vw, 25px); height: clamp(3px, 0.31vw, 6px); border-radius: 1vw;
+    }
+    .topSlider > span input:not(:first-of-type){
+        margin-left: 2px;
+    }
+    .topSlider > span input.active{
+        width: clamp(15px, 1.3vw, 20px); height: clamp(15px, 1.3vw, 20px); border-radius: 0;
+        background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 50 50'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23803d3b; %7D .cls-1, .cls-2 %7B stroke-width: 0px; %7D .cls-2 %7B fill: %23995858; %7D %3C/style%3E%3C/defs%3E%3Cellipse class='cls-1' cx='18.0226' cy='35' rx='18.0226' ry='15'/%3E%3Cpath class='cls-1' d='M36.2988,2.7556c0-2.1477-3.239-4.2814-4.8373-1.2478-.2757.5233-.3821,1.121-.3821,1.7125v31.6023c0,1.3278.9535,2.5527,2.2763,2.6677,1.4815.1288,2.7237-1.0356,2.7237-2.4902l.1086-17.23c.1086.0485.2151.0991.3335.1374,5.5812,1.8074,8.8962,6.0539,7.0112,9.5535-.3106.5767-.7168,1.724-.3593,2.3.4348.7004,1.5745.7303,2.1667.3217,8.1851-5.6459,4.2003-17.2797-1.3704-20.0802-5.5707-2.8005-7.671-4.6155-7.671-7.2468Z'/%3E%3Cpath class='cls-2' d='M-4.7341,32.5364'/%3E%3C/svg%3E");
+        background-size: contain; background-repeat: no-repeat; background-color: transparent;
+    }
+
+    /* * */
+
+    .lastMonthTop3{
+        padding: 0 10px; margin: 0 auto 3.12rem; box-sizing: border-box;
+    }
+    .lastMonthTop3 h2{
+        color: #322c2b; display: flex; align-items: center; margin-bottom: 1.5rem;
+    }
+    .lastMonthTop3 h2::after{
+        content: ''; flex-grow: 1; background: #322c2b; height: 1px; margin-left: 0.6rem;
+    }
+    .lastMonthTop3 ol li{
+        position: relative; background-color: #eeeeee; border-radius: 10px;
+        padding: 1.5rem 1.04rem 25vw; text-align: center;
+        transition: background-color 0.3s ease-in; box-sizing: border-box;
+    }
+    .lastMonthTop3 ol li:not(:last-of-type){
+        margin-bottom: 20px;
+    }
+    .lastMonthTop3 ol li:hover{
+        background-color: #ba8f6c;
+    }
+    .lastMonthTop3 ol li span{
+        font-size: clamp(40px, 3.67vw, 60px);
+        position: absolute; top: 0; left: 1.5rem; font-style: italic; color: #322c2b;
+        text-shadow: -1px 0 #eeeeee, 0 1px #eeeeee, 1px 0 #eeeeee, 0 -1px #eeeeee;
+        transition: color 0.5s, text-shadow 0.5s;
+    }
+    .lastMonthTop3 ol li:hover span{
+        color: #eeeeee; 
+        text-shadow: -1px 0 #ba8f6c, 0 1px #ba8f6c, 1px 0 #ba8f6c, 0 -1px #ba8f6c;
+    }
+    .lastMonthTop3 ol li img{
+        width: 100%; display: block; margin: 0 auto 1rem;
+    }
+    .lastMonthTop3 ol li dl dt{
+        color: #322c2b; line-height: 0.93rem; margin-bottom: 1rem;
+    }
+    .lastMonthTop3 ol li:hover dl dt{
+        color: #eeeeee;
+    }
+    .lastMonthTop3 ol li dl dd:first-of-type{
+        color: #803d3b; 
+    }
+    .lastMonthTop3 ol li dl dd:last-of-type{
+        position: absolute; bottom: 0.5rem; left: 50%; transform: translateX(-50%);
+    }
+    .lastMonthTop3 ol li:hover dl dd:last-of-type a{
+        background-color: #803d3b;
+    }
+
+    /* * */
+
+    .mainContainer > p{
+        color: #322c2b; margin: 0 auto 3.12rem;
+        padding: 20px 10px; text-align: center; background-color: #cb8360;
+    }
+    .mainContainer > p mark{
+        color: #fff; background: transparent; font-style: normal;
+    }
+    .mainContainer > p small{
+        color: #7c4d36; display: block; margin-top: 10px;
+    }
+
+    /* * */
+
+    .newVinyl{
+        margin: 0 auto 3.12rem; background-color: #803d3b; width: 100%;
+        padding: 1rem 0;
+    }
+    .newVinyl div h2{
+        color: #eeeeee; text-align: center; line-height: 1; width: 90vw;
+        display: flex; align-items: center; margin: 0 auto 0.5rem;
+    }
+    .newVinyl h2::before{
+        content: ''; flex-grow: 1; background: #eeeeee; height: 2px; margin: 0 0.5rem;
+    }
+    .newVinyl h2::after{
+        content: ''; flex-grow: 1; background: #eeeeee; height: 2px; margin: 0 0.5rem;
+    }
+    .newVinyl div img{
+        display: none;
+    }
+    .newVinyl ul{
+        display: flex; flex-wrap: wrap; padding: 2.08vw;
+    }
+    .newVinyl ul li{
+        flex: 1 0 40%;
+        position: relative; background-color: #eeeeee; padding: 2.8vw 2vw 5.12vw; 
+        box-sizing: border-box; transition: background-color 0.2s ease-in;
+        border-top-left-radius: 0.62rem; border-bottom-left-radius: 0.62rem; border-bottom-right-radius: 0.62rem;
+    }
+    .newVinyl ul li:nth-child(2n){
+        margin-left: 10px;
+    }
+    .newVinyl ul li:hover,
+    .discount ul li:hover{
+        background-color: #ba8f6c;
+    }
+    .newVinyl ul li:not(:nth-last-child(1),:nth-last-child(2)){
+        margin-bottom: 10px;
+    }
+    .newVinyl ul li a{
+        display: block; margin-bottom: 0.6rem;
+    }
+    .newVinyl ul li a img{
+        width: 100%;
+    }
+    .newVinyl ul li dl dt{
+        color: #322c2b; line-height: 0.93rem; margin-bottom: 0.5rem;
+    }
+    .newVinyl ul li dl dd,
+    .discount ul li dl dd strong{
+        color: #803d3b;
+    }
+    .newVinyl ul li input{
+        position: absolute; bottom: 1.04vw; right: 1.3vw; text-indent: -9999px;
+        display: block; width: clamp(13px, 1.04vw, 15px); height: clamp(13px, 1.04vw, 15px); border: none; cursor: pointer;
+        background: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 50 50'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23322c2b; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M37.284,2.5402c-4.8406,0-9.2435,2.8837-12.284,7.9792-3.0405-5.0941-7.4439-7.9782-12.2845-7.9792h-.0009c-3.3452,0-6.5012,1.3794-8.8853,3.8847C1.3597,9.0189,0,12.5904,0,16.4816c0,13.6254,23.4567,29.9161,24.4549,30.6035l.5451.3747.5446-.3747c.9991-.6873,24.4554-16.9781,24.4554-30.6035,0-8.7266-6.465-13.9414-12.716-13.9414ZM23.2797,13.3829l1.7203,3.44,1.7203-3.44c2.5287-5.0575,6.3796-7.958,10.5638-7.958,6.1542,0,9.8314,5.6218,9.8314,11.0568,0,10.6065-18.1143,24.5047-22.1154,27.4447-4.0006-2.94-22.1154-16.8401-22.1154-27.4447,0-3.1471,1.0775-6.0124,3.0339-8.0679,1.8339-1.9273,4.2476-2.9888,6.7956-2.9888l.0014-.9614h0v.9614c4.1856.0009,8.036,2.9015,10.5642,7.958Z'/%3E%3C/svg%3E") center / contain no-repeat;
+    }
+    .newVinyl ul li input.active{
+        animation: heart 0.3s ease-in forwards; 
+        background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 50 50'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23803d3b; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M37.2841,2.5402c-4.8406,0-9.2436,2.8837-12.2841,7.9792-3.0405-5.0941-7.444-7.9782-12.2845-7.9792h-.001c-3.3452,0-6.5012,1.3794-8.8853,3.8846C1.3597,9.0189,0,12.5904,0,16.4816c0,13.6254,23.4567,29.9161,24.4549,30.6035l.5451.3747.5446-.3747c.9991-.6873,24.4554-16.9781,24.4554-30.6035,0-8.7266-6.465-13.9414-12.7159-13.9414Z'/%3E%3C/svg%3E");
+    }
+
+    /* * */
+
+    .discount{
+        position: relative; margin: 0 auto 3.12rem; 
+        background-color: #c9a080; padding: 2.86vw 5.2vw 7.16vw;
+    }
+    .discount h2{
+        color: #322c2b; display: flex; align-items: center; margin-bottom: 1rem;
+    }
+    .discount h2:after{
+        content: ''; flex-grow: 1; background: #322c2b; height: 1px; margin: 0 0.6rem;
+    }
+    .discount h2 a{
+        order: 1;
+    }
+    .discount > div{
+        position: relative; margin: 0 auto;
+    }
+    .discount > div span input{
+        position: absolute; z-index: 5; top: 50%; transform: translateY(-50%);
+        cursor: pointer; width: 3rem; height: 3rem; text-indent: -9999px;
+        background-repeat: no-repeat; background-size: 0.62rem;
+        border: none; background-color: #af8260; border-radius: 2.18rem;
+    }
+    .discount > div span input:hover{
+        background-color: #803d3b;
+    }
+    .discount > div span input:first-of-type{
+        left: -5px; background-position: 46%;
+        background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 27.8 50'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23eee; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M27,49.2h0c1.1-1.1,1.1-2.9,0-4L6.9,25,27,4.9c1.1-1.1,1.1-2.9,0-4h0c-1.1-1.1-2.9-1.1-4,0L.8,23c-1.1,1.1-1.1,2.9,0,4l22.2,22.2c1.1,1.1,2.9,1.1,4,0h0Z'/%3E%3C/svg%3E");
+    }
+    .discount > div span input:last-of-type{
+        right: -5px; background-position: 52%;
+        background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 27.8443 50'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23eeeeee; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M.8331.833h0c-1.1108,1.1107-1.1108,2.9116,0,4.0224l20.1446,20.1446L.8331,45.1445c-1.1107,1.1107-1.1107,2.9116,0,4.0224h0c1.1107,1.1108,2.9116,1.1108,4.0224,0l22.1558-22.1558c1.1107-1.1107,1.1107-2.9116,0-4.0224L4.8554.8331c-1.1107-1.1107-2.9116-1.1107-4.0223,0Z'/%3E%3C/svg%3E");
+    }
+    .discount > div div{
+        overflow-x: auto;
+    }
+    .discount > div div ul{
+        display: flex;
+        scrollbar-width: none; -ms-overflow-style: none; transition: transform 0.4s ease-in;    
+    }
+    .discount > div div ul::-webkit-scrollbar{
+        display: none;
+    }
+    .discount > div div ul li{
+        min-width: 100%;
+         position: relative; background-color: #eeeeee; padding: 2.8vw 2vw 5.12vw; 
+        box-sizing: border-box; transition: background-color 0.2s ease-in;
+        border-top-left-radius: 0.62rem; border-bottom-left-radius: 0.62rem; border-bottom-right-radius: 0.62rem;
+    }
+    .discount > div div ul li a{
+        display: block; margin-bottom: 0.93rem;
+    }
+    .discount > div div ul li a img{
+        width: 100%;
+    }
+    .discount > div div ul li dl dt{
+        color: #322c2b; line-height: 0.93rem; margin-bottom: 0.5rem;
+    }
+    .discount > div div ul li dl dd s{
+        color: rgba(50, 44, 43, 0.5);
+    }
+    .discount > div div ul li dl dd strong{
+        margin-left: 0.31rem;
+    }
+    .discount > div div ul li input{
+        position: absolute; bottom: 1.04vw; right: 1.3vw; text-indent: -9999px;
+        display: block; width: clamp(15px, 1.04vw, 20px); height: clamp(15px, 1.04vw, 20px); border: none; cursor: pointer;
+        background: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 50 50'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23322c2b; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M37.284,2.5402c-4.8406,0-9.2435,2.8837-12.284,7.9792-3.0405-5.0941-7.4439-7.9782-12.2845-7.9792h-.0009c-3.3452,0-6.5012,1.3794-8.8853,3.8847C1.3597,9.0189,0,12.5904,0,16.4816c0,13.6254,23.4567,29.9161,24.4549,30.6035l.5451.3747.5446-.3747c.9991-.6873,24.4554-16.9781,24.4554-30.6035,0-8.7266-6.465-13.9414-12.716-13.9414ZM23.2797,13.3829l1.7203,3.44,1.7203-3.44c2.5287-5.0575,6.3796-7.958,10.5638-7.958,6.1542,0,9.8314,5.6218,9.8314,11.0568,0,10.6065-18.1143,24.5047-22.1154,27.4447-4.0006-2.94-22.1154-16.8401-22.1154-27.4447,0-3.1471,1.0775-6.0124,3.0339-8.0679,1.8339-1.9273,4.2476-2.9888,6.7956-2.9888l.0014-.9614h0v.9614c4.1856.0009,8.036,2.9015,10.5642,7.958Z'/%3E%3C/svg%3E") center / contain no-repeat;
+    }
+    .discount > div div ul li input.active{
+        animation: heart 0.3s ease-in forwards; 
+        background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 50 50'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23803d3b; stroke-width: 0px; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M37.2841,2.5402c-4.8406,0-9.2436,2.8837-12.2841,7.9792-3.0405-5.0941-7.444-7.9782-12.2845-7.9792h-.001c-3.3452,0-6.5012,1.3794-8.8853,3.8846C1.3597,9.0189,0,12.5904,0,16.4816c0,13.6254,23.4567,29.9161,24.4549,30.6035l.5451.3747.5446-.3747c.9991-.6873,24.4554-16.9781,24.4554-30.6035,0-8.7266-6.465-13.9414-12.7159-13.9414Z'/%3E%3C/svg%3E");
+    }
+
+    /* * */
+
+    .moreVinyl{
+        max-width: 767px; padding: 0 10px; margin: 0 auto 4.5rem; text-align: center;
+    }
+    .moreVinyl > div{
+        border-radius: 0.93rem;
+    }
+    .moreVinyl > div:first-child{
+        margin-bottom: 4%;
+        position: relative; padding: 20px; box-sizing: border-box;
+        background: url('../images/bg_01.png') center / cover no-repeat;
+    }
+    .moreVinyl > div:first-child::before,
+    .moreVinyl > div:last-child div::before{
+        content: ''; position: absolute; border-radius: 0.62rem;
+        top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); 
+        opacity: 0; transition: opacity 0.3s ease;
+    }
+    .moreVinyl > div:first-child:hover:before,
+    .moreVinyl > div:last-child div:hover:before{
+        opacity: 1;
+    }
+    .moreVinyl > div:last-child div{
+        position: relative; padding: 0 5%; box-sizing: border-box;
+        border-radius: 0.93rem;
+    }
+    .moreVinyl > div:last-child div:first-child{
+        margin-bottom: 4%; padding: 20px;
+        background: url('../images/bg_02.png') center / cover no-repeat;
+    }
+    .moreVinyl > div:last-child div:last-child{
+        padding: 20px;
+        background: url('../images/bg_03.png') center / cover no-repeat;
+    }
+    .moreVinyl p{
+       color: #eeeeee; z-index: 2; position: relative;
+       line-height: 1rem; margin-bottom: 1rem;
+    }
+    .moreVinyl p b{
+        display: block; margin-bottom: 0.62rem;
+    }
+    .moreVinyl a{
+        z-index: 2; position: relative;
+    }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1279px){
     .topSlider{
         margin: 0 0 6.25rem; overflow: hidden; position: relative;
@@ -103,7 +436,7 @@
     }
     .lastMonthTop3 ol li{
         width: 33.33%; position: relative; background-color: #eeeeee; border-radius: 10px;
-        padding: 2.5rem 1.04rem 7.29vw; flex-basis: 0; flex-grow: 1; text-align: center;
+        padding: 2.5rem 1.04rem 10vw; flex-basis: 0; flex-grow: 1; text-align: center;
         transition: background-color 0.3s ease-in; box-sizing: border-box; max-height: 545px; max-width: 345px;
     }
     .lastMonthTop3 ol li:hover{
@@ -126,7 +459,7 @@
         width: 100%; display: block; margin: 0 auto 1.56rem;
     }
     .lastMonthTop3 ol li dl dt{
-        color: #322c2b; line-height: 0.93rem; margin-bottom: 1.25rem;
+        color: #322c2b; line-height: 0.93rem; margin-bottom: 1rem;
     }
     .lastMonthTop3 ol li:hover dl dt{
         color: #eeeeee;
@@ -180,7 +513,7 @@
         flex: 1 0 23%;
         position: relative; background-color: #eeeeee; padding: 2.8vw 1.3vw 3.12vw; 
         box-sizing: border-box; transition: background-color 0.2s ease-in;
-        border-top-left-radius: 0.93rem; border-bottom-left-radius: 0.93rem; border-bottom-right-radius: 1.25rem;
+        border-top-left-radius: 0.93rem; border-bottom-left-radius: 0.93rem; border-bottom-right-radius: 0.93rem;
     }
     .newVinyl ul li:not(:nth-child(1)):not(:nth-child(5)){
         margin-left: 1.56vw;
@@ -269,7 +602,7 @@
     .discount > div div ul li a{
         display: block; margin-bottom: 0.93rem;
     }
-    .discount > div div uxl li a img{
+    .discount > div div ul li a img{
         width: 100%;
     }
     .discount > div div ul li dl dt{
