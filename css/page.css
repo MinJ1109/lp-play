@@ -254,8 +254,7 @@
         display: none;
     }
     .discount > div div ul li{
-        min-width: 100%;
-         position: relative; background-color: #eeeeee; padding: 2.8vw 2vw 5.12vw; 
+        min-width: 100%; position: relative; background-color: #eeeeee; padding: 2.8vw 2vw 5.12vw; 
         box-sizing: border-box; transition: background-color 0.2s ease-in;
         border-top-left-radius: 0.62rem; border-bottom-left-radius: 0.62rem; border-bottom-right-radius: 0.62rem;
     }
