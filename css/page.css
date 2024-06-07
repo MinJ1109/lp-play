@@ -250,6 +250,7 @@
         display: flex;
         scrollbar-width: none; -ms-overflow-style: none; transition: transform 0.4s ease-in;    
     }
+    .discount > div div,
     .discount > div div ul::-webkit-scrollbar{
         display: none;
     }
@@ -589,6 +590,7 @@
         display: grid; grid-template-columns: repeat(7, 1fr); gap: clamp(20px, 2.08vw, 40px);
         scrollbar-width: none; -ms-overflow-style: none; transition: transform 0.4s ease-in;    
     }
+    .discount > div div,
     .discount > div div ul::-webkit-scrollbar{
         display: none;
     }
@@ -936,6 +938,7 @@
         display: grid; grid-template-columns: repeat(7, 1fr); gap: clamp(20px, 2.08vw, 40px);
         scrollbar-width: none; -ms-overflow-style: none; transition: transform 0.4s ease-in;    
     }
+    .discount > div div,
     .discount > div div ul::-webkit-scrollbar{
         display: none;
     }
